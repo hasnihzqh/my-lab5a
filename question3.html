@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>jQuery DOM Operations</title>
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>  
+    <style>
+        .myStyle {
+            background-color: coral;
+            padding: 16px;
+        }    
+    </style>
+    </head>
+    <body>
+        <!--Element that will be change-->
+        <div id="myElement">Original Text</div>
+
+        <!--element that will get the css class-->
+        <div id="myDIV">
+            <p>I am a myDIV.</p>
+        </div>
+
+        <!--button that will trigger alert-->
+    <button id="myButton">Click me</button>
+    
+    <script>
+        // a
+    // var element = document.getElementById("myElement");
+    // element.textContent = "Modified Text";
+
+    //jQuery equivalent of a
+        //Change the text of the element with ID 'myElement'
+        $("#myElement").text("Modified Text");
+
+     // b
+    // var paragraph = document.querySelector("#myDIV");
+    // paragraph.classList.add("myStyle");
+
+    //jQuery equivalent of b   
+        //to add class 'mystle to the DIV'
+        $("#myDIV").addClass("myStyle");
+
+     // c
+    // var button = document.getElementById("myButton");
+    // button.addEventListener("click", function() {
+    //   alert("Button clicked!");
+    // });
+
+    //jQuery equivalent of c   
+        //to show alert when button clicked
+        $("#myButton").on("click", function() {
+            alert("Button clicked!");
+        });
+    </script>
+    </body>
+</html>
